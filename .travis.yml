@@ -38,3 +38,10 @@ script:
   - mysql -uroot < sql/create/drop_mysql.sql
   - cd bin
   - make -j 10 -k
+  
+notifications:
+  irc:
+    channels:
+      - "irc.rizon.net#customcoder"
+    on_success: always
+    on_failure: always
